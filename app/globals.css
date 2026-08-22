@@ -1,0 +1,143 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::selection {
+  background: rgba(125, 211, 192, 0.25);
+  color: #e8e6e1;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #12141a;
+  color: #e8e6e1;
+}
+
+[dir="rtl"] {
+  font-family: var(--font-sans-ar), var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #323748 #171a22;
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #171a22;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #323748;
+  border-radius: 999px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: #3d4358;
+}
+
+:focus-visible {
+  outline: 2px solid #7dd3c0;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Prose content styling for chapter pages */
+.prose-c {
+  color: #d7d5cf;
+  line-height: 1.75;
+}
+
+.prose-c p {
+  margin-top: 1.1em;
+  margin-bottom: 1.1em;
+  font-size: 1.0625rem;
+}
+
+.prose-c h2 {
+  font-family: var(--font-mono);
+  color: #e8e6e1;
+  font-size: 1.375rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin-top: 2.75em;
+  margin-bottom: 0.9em;
+  padding-bottom: 0.6em;
+  border-bottom: 1px solid #323748;
+}
+
+.prose-c h3 {
+  font-family: var(--font-mono);
+  color: #e8e6e1;
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-top: 2em;
+  margin-bottom: 0.75em;
+}
+
+.prose-c ul,
+.prose-c ol {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  padding-left: 1.4em;
+}
+
+.prose-c li {
+  margin-top: 0.45em;
+  font-size: 1.0625rem;
+}
+
+.prose-c ul li {
+  list-style: none;
+  position: relative;
+}
+
+.prose-c ul li::before {
+  content: "›";
+  position: absolute;
+  left: -1.2em;
+  color: #7dd3c0;
+}
+
+.prose-c ol li {
+  list-style: decimal;
+  color: #d7d5cf;
+}
+
+.prose-c strong {
+  color: #f2f1ee;
+  font-weight: 600;
+}
+
+.prose-c code:not(pre code) {
+  font-family: var(--font-mono);
+  background: #242836;
+  border: 1px solid #323748;
+  color: #e8a94c;
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+  font-size: 0.875em;
+}
+
+.prose-c a {
+  color: #7dd3c0;
+  text-underline-offset: 3px;
+}
